@@ -1,17 +1,23 @@
 ---
-
+import { Image } from "astro:assets";
+import asioclamator from "../assets/asioclamator.webp";
 ---
 
-<header class="h-100 flex items-center justify-center">
-    <div class="inline-flex items-center flex-row gap-6">
-        <img src="#" class="w-25 h-25" />
+<header class="hero bg-base-200 min-h-180">
+    <div class="hero-content flex-col lg:flex-row-reverse">
+        <Image
+            alt="Tailwind CSS hero component"
+            src={asioclamator}
+            class="max-w-xs rounded-lg shadow-lg"
+            width={250}
+            height={250}
+        />
         <div>
-            <h1 class="text-6xl tracking-tighter font-semibold">
-                Hi! I'm IJsbrand
-            </h1>
-            <h2 class="text-2xl tracking-tight font-medium">
-                Software Developer & Designer
-            </h2>
+            <h1 class="text-5xl font-semibold">Hi! I'm IJsbrand.</h1>
+            <p class="text-2xl py-6">
+                Software Developer & Designer working @ home.
+            </p>
+            <button class="btn btn-primary">View Projects</button>
         </div>
     </div>
 </header>

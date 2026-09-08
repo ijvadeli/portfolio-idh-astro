@@ -3,19 +3,16 @@ import "../styles/global.css";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="retro">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="generator" content={Astro.generator} />
-        <link rel="stylesheet" href="../assets/style.css" />
         <title>Portfolio IJsbrand</title>
     </head>
     <body>
-        <div class="max-w-3xl m-auto">
-            <slot />
-        </div>
+        <slot />
     </body>
 </html>
