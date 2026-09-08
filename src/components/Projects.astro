@@ -1,10 +1,18 @@
 ---
-
+import ProjectCard from "./ui/ProjectCard.astro";
 ---
 
-<div class="m-4">
-    <h1 class="text-5xl font-semibold">Projects</h1>
-    <p class="py-4">
-        Some projects to showcase my skill and what I'm proud of.
-    </p>
+<div>
+    <div class="my-12">
+        <h1 class="text-4xl font-semibold">Projects</h1>
+        <p class="pt-2">
+            Some projects to showcase my skill and what I'm proud of.
+        </p>
+    </div>
+    <ProjectCard
+        title="Kivo"
+        info="Simple text editor build in Tauri with React & Typescript. It's made to be as lightweight as possible and not using external API's."
+        image="./kivo-screenshot.png"
+        link="https://github.com/ijvadeli/Kivo"
+    />
 </div>
