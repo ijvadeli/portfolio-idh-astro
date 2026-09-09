@@ -1,56 +1,82 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
 
 @import "tailwindcss";
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: light --default, dark --prefersdark, ijvadeliretro;
+    themes:
+        light --default,
+        dark --prefersdark,
+        ijvadeli-light;
 }
-
 
 @plugin "daisyui/theme" {
-  name: "ijvadeliretro";
-  default: false;
-  prefersdark: false;
-  color-scheme: "dark";
-  --color-base-100: oklch(14% 0 0);
-  --color-base-200: oklch(20% 0 0);
-  --color-base-300: oklch(26% 0 0);
-  --color-base-content: oklch(97% 0 0);
-  --color-primary: oklch(60% 0.118 184.704);
-  --color-primary-content: oklch(98% 0.014 180.72);
-  --color-secondary: oklch(44% 0.043 257.281);
-  --color-secondary-content: oklch(98% 0.003 247.858);
-  --color-accent: oklch(54% 0.281 293.009);
-  --color-accent-content: oklch(96% 0.016 293.756);
-  --color-neutral: oklch(14% 0 0);
-  --color-neutral-content: oklch(98% 0 0);
-  --color-info: oklch(68% 0.169 237.323);
-  --color-info-content: oklch(97% 0.013 236.62);
-  --color-success: oklch(76% 0.233 130.85);
-  --color-success-content: oklch(98% 0.031 120.757);
-  --color-warning: oklch(70% 0.213 47.604);
-  --color-warning-content: oklch(98% 0.016 73.684);
-  --color-error: oklch(65% 0.241 354.308);
-  --color-error-content: oklch(97% 0.014 343.198);
-  --radius-selector: 0.25rem;
-  --radius-field: 2rem;
-  --radius-box: 1rem;
-  --size-selector: 0.25rem;
-  --size-field: 0.25rem;
-  --border: 1px;
-  --depth: 0;
-  --noise: 0;
-}
+    name: "ijvadeli-light";
+    default: true;
+    prefersdark: false;
+    color-scheme: light;
 
-@theme {
-    --font-mono: "JetBrains Mono", monospace;
+    default: true;
+      prefersdark: false;
+      color-scheme: light;
+
+      /* Base */
+      --color-base-100: #f7f7f5;
+      --color-base-200: #efefec;
+      --color-base-300: #e3e3de;
+      --color-base-content: #171716;
+
+      /* Brand */
+      --color-primary: #294f45;
+      --color-primary-content: #ffffff;
+
+      --color-secondary: #deded8;
+      --color-secondary-content: #242422;
+
+      --color-accent: #e6c65a;
+      --color-accent-content: #292817;
+
+      /* Neutral */
+      --color-neutral: #242422;
+      --color-neutral-content: #f7f7f5;
+
+      /* Semantic */
+      --color-info: #557a91;
+      --color-info-content: #ffffff;
+
+      --color-success: #4f765b;
+      --color-success-content: #ffffff;
+
+      --color-warning: #c28a35;
+      --color-warning-content: #ffffff;
+
+      --color-error: #b85b50;
+      --color-error-content: #ffffff;
+
+      /* Shape */
+      --radius-selector: 0;
+      --radius-field: 0rem;
+      --radius-box: 0rem;
+
+      /* Depth */
+      --border: 1px;
+      --depth: 0;
+      --noise: 0;
 }
 
 body {
-    font-family: "JetBrains Mono", monospace;
+    font-family: "Google Sans Code", monospace;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Roboto", sans-serif;
-    letter-spacing: -0.025em;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Google Sans", sans-serif;
+    letter-spacing: -0.03em;
+}
+
+p {
+    font-weight: 500;
 }

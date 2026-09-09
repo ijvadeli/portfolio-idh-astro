@@ -2,17 +2,41 @@
 import ProjectCard from "./ui/ProjectCard.astro";
 ---
 
-<div>
+<section class="w-full">
     <div class="my-12">
-        <h1 class="text-4xl font-semibold">Projects</h1>
-        <p class="pt-2">
-            Some projects to showcase my skill and what I'm proud of.
+        <h1 class="text-5xl font-semibold">Projects</h1>
+        <p class="pt-4 text-lg">
+            Some projects to showcase my skills and what I'm proud of.
         </p>
     </div>
-    <ProjectCard
-        title="Kivo"
-        info="Simple text editor build in Tauri with React & Typescript. It's made to be as lightweight as possible and not using external API's."
-        image="./kivo-screenshot.png"
-        link="https://github.com/ijvadeli/Kivo"
-    />
-</div>
+
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <ProjectCard
+            title="Kivo"
+            info="Simple text editor built in Tauri with React & TypeScript."
+            image="/KivoBanner.webp"
+            link="https://github.com/ijvadeli/Kivo"
+        />
+
+        <ProjectCard
+            title="Snelvoedsel"
+            info="WIP, Accelerating hospitality through digital innovation."
+            image="/Snelvoedsel.webp"
+            link="https://www.snelvoedsel.nl/"
+        />
+
+        <ProjectCard
+            title="Project Three"
+            info="A short description of your third project and the technologies used."
+            image="/project-three.png"
+            link="https://github.com/"
+        />
+
+        <ProjectCard
+            title="Project Four"
+            info="A short description of your fourth project and the technologies used."
+            image="/project-four.png"
+            link="https://github.com/"
+        />
+    </div>
+</section>
