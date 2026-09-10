@@ -6,7 +6,8 @@
     themes:
         light --default,
         dark --prefersdark,
-        ijvadeli-light;
+        ijvadeli-light,
+        ijvadeli-dark;
 }
 
 @plugin "daisyui/theme" {
@@ -62,6 +63,57 @@
       --depth: 0;
       --noise: 0;
 }
+
+@plugin "daisyui/theme" {
+    name: "ijvadeli-dark";
+    default: false;
+    prefersdark: true;
+    color-scheme: dark;
+
+    /* Base */
+    --color-base-100: #171a18;
+    --color-base-200: #1e2421;
+    --color-base-300: #29302c;
+    --color-base-content: #eeeFE9;
+
+    /* Brand */
+    --color-primary: #6fae9b;
+    --color-primary-content: #10211b;
+
+    --color-secondary: #343a36;
+    --color-secondary-content: #e8e9e3;
+
+    --color-accent: #e6c65a;
+    --color-accent-content: #25220f;
+
+    /* Neutral */
+    --color-neutral: #e4e5df;
+    --color-neutral-content: #171a18;
+
+    /* Semantic */
+    --color-info: #79a4bb;
+    --color-info-content: #111c22;
+
+    --color-success: #76a983;
+    --color-success-content: #102015;
+
+    --color-warning: #d5a354;
+    --color-warning-content: #21170a;
+
+    --color-error: #d17a70;
+    --color-error-content: #24100e;
+
+    /* Shape */
+    --radius-selector: 0;
+    --radius-field: 0rem;
+    --radius-box: 0rem;
+
+    /* Depth */
+    --border: 1px;
+    --depth: 0;
+    --noise: 0;
+}
+
 
 body {
     font-family: "Google Sans Code", monospace;
