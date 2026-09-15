@@ -1,0 +1,99 @@
+---
+const skills = [
+    {
+        category: "Frontend",
+        items: [
+            "React",
+            "TypeScript",
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "Tailwind CSS",
+        ],
+    },
+    {
+        category: "Frameworks & Tools",
+        items: ["Astro", "Next.js", "Vite", "Tauri"],
+    },
+    {
+        category: "Other",
+        items: [
+            "Rust",
+            "Go",
+            "Mobile development",
+            "Penpot",
+            "Figma",
+            "Canva",
+            "Git & GitHub",
+            "Linux",
+            "NixOS",
+        ],
+    },
+];
+
+const interests = ["Performance", "Accessibility", "SEO", "Clean code"];
+---
+
+<section id="skills" class="w-full mt-50 scroll-mt-24">
+    <div class="my-12">
+        <h1 class="text-5xl font-semibold">Skills</h1>
+
+        <p class="pt-4 text-lg">
+            Technologies I use and have experience in, and my main focus.
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        {skills.map((group) => (
+            <div class="card bg-base-200 w-full">
+                <div class="card-body">
+                    <h2 class="card-title text-3xl">{group.category}</h2>
+
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        {group.items.map((skill) => (
+                            <span class="badge badge-lg bg-base-100 px-4 py-4 text-base font-medium">
+                                {skill}
+                            </span>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        ))}
+
+        <div class="card bg-primary w-full text-primary-content">
+            <div class="card-body">
+                <h2 class="card-title text-3xl">What I focus on</h2>
+
+                <p class="mt-2 text-base leading-relaxed opacity-80">
+                    I mainly focus on accessibility and optimization, while
+                    maintaining unique designs.
+                </p>
+
+                <div class="mt-5 flex flex-wrap gap-2">
+                    {interests.map((interest) => (
+                        <span class="badge badge-lg border-primary-content/20 bg-primary-content/10 px-4 py-4 text-primary-content">
+                            {interest}
+                        </span>
+                    ))}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="my-12">
+        <div class="card bg-base-200">
+            <div class="card-body sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                    <h2 class="card-title text-3xl">Keep learning</h2>
+
+                    <p class="mt-2 max-w-2xl text-lg leading-relaxed">
+                        As a developer you keep learning and growing with each
+                        project you build. Reflecting on these projects and what
+                        you could've done better next time gives me motivation
+                        to build more.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
