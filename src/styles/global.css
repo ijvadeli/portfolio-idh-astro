@@ -1,20 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
 
 @import "tailwindcss";
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: light --default, dark --prefersdark, retro;
+    themes:
+        light --default,
+        dark --prefersdark,
+        ijvadeli-light;
 }
 
-@theme {
-    --font-mono: "JetBrains Mono", monospace;
+@plugin "daisyui/theme" {
+    name: "ijvadeli-light";
+    default: true;
+    prefersdark: false;
+    color-scheme: light;
+
+    default: true;
+      prefersdark: false;
+      color-scheme: light;
+
+      /* Base */
+      --color-base-100: #f7f7f5;
+      --color-base-200: #efefec;
+      --color-base-300: #e3e3de;
+      --color-base-content: #171716;
+
+      /* Brand */
+      --color-primary: #294f45;
+      --color-primary-content: #ffffff;
+
+      --color-secondary: #deded8;
+      --color-secondary-content: #242422;
+
+      --color-accent: #e6c65a;
+      --color-accent-content: #292817;
+
+      /* Neutral */
+      --color-neutral: #242422;
+      --color-neutral-content: #f7f7f5;
+
+      /* Semantic */
+      --color-info: #557a91;
+      --color-info-content: #ffffff;
+
+      --color-success: #4f765b;
+      --color-success-content: #ffffff;
+
+      --color-warning: #c28a35;
+      --color-warning-content: #ffffff;
+
+      --color-error: #b85b50;
+      --color-error-content: #ffffff;
+
+      /* Shape */
+      --radius-selector: 0;
+      --radius-field: 0rem;
+      --radius-box: 0rem;
+
+      /* Depth */
+      --border: 1px;
+      --depth: 0;
+      --noise: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: "JetBrains Mono", monospace;
+    font-family: "Google Sans Code", monospace;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Roboto", sans-serif;
-    letter-spacing: -0.025em;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Google Sans", sans-serif;
+    letter-spacing: -0.03em;
+}
+
+p, a   {
+    font-weight: 500;
 }

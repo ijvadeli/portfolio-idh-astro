@@ -3,12 +3,35 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import HeroSection from "../components/HeroSection.astro";
 import Projects from "../components/Projects.astro";
+import About from "../components/About.astro";
+import ContactForm from "../components/ContactForm.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout>
     <Navbar />
-    <HeroSection />
-    <main class="max-w-4xl m-auto">
-        <Projects />
-    </main>
+
+    <div class="mx-auto max-w-4xl">
+        <main>
+            <div class="m-4">
+                <HeroSection />
+            </div>
+
+            <div class="m-4">
+                <Projects />
+            </div>
+
+            <div class="m-4">
+                <About />
+            </div>
+
+            <div class="m-4">
+                <ContactForm />
+            </div>
+        </main>
+
+        <div class="m-4">
+            <Footer />
+        </div>
+    </div>
 </Layout>
