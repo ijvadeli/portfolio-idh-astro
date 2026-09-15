@@ -5,12 +5,55 @@ import "../styles/global.css";
 <!doctype html>
 <html lang="en" data-theme="ijvadeli-light">
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta charset="UTF-8" />
+        <meta
+            name="description"
+            content="Developer creating fast, modern, and user-focused digital experiences. Explore my projects, skills or get in touch."
+        />
+        <meta name="author" content="IJsbrand van de Lindt" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Person schema tells the browser IJvadeli = IJsbrand van de Lindt and my profession -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "IJsbrand van de Lindt",
+                "alternateName": "IJvadeli",
+                "url": "https://yourdomain.com/",
+                "jobTitle": "Software Developer"
+            }
+        </script>
+        <!-- Favicons -->
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+        />
+
+        <!-- Apple -->
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+        />
+
+        <!-- Web app -->
+        <link rel="manifest" href="/site.webmanifest" />
+
+        <meta name="theme-color" content="#294f45" />
+
         <meta name="generator" content={Astro.generator} />
-        <title>Portfolio IJsbrand</title>
+
+        <title>IJvadeli</title>
     </head>
     <body>
         <slot />
