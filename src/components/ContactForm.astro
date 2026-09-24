@@ -1,12 +1,19 @@
+---
+import SafeContactLink from "./ui/SafeContactLink.astro";
+---
+
 <section id="contact" class="w-full mt-50 scroll-mt-24">
     <div class="my-12">
         <h1 class="text-5xl font-semibold">Contact</h1>
         <p class="pt-4 text-lg">
             Want to work together or have questions about my projects?
+            <br />
+            Mail me at{" "}
+            <SafeContactLink user="idhvandelindt" domain="gmail.com" />
         </p>
     </div>
 
-    <form
+    <!-- <form
         method="POST"
         action="/api/contact"
         enctype="application/x-www-form-urlencoded"
@@ -50,5 +57,5 @@
                 Send message
             </button>
         </div>
-    </form>
+    </form> -->
 </section>
