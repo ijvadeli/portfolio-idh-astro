@@ -5,19 +5,26 @@ import asioclamator from "../assets/asioclamator.jpg";
 
 <header id="home" class="hero min-h-180 scroll-mt-24">
     <div class="hero-content p-0 flex-col lg:flex-row-reverse">
-        <Image
-            src={asioclamator}
-            alt="Image of an asio clamator, owl"
-            width={250}
-            height={250}
-            densities={[1, 2]}
-            class="max-w-62.5"
-            priority
-        />
+        <a
+            href="https://en.wikipedia.org/wiki/Striped_owl"
+            target="_blank"
+            aria-label="Link to wikipedia about the Striped owl"
+        >
+            <Image
+                src={asioclamator}
+                alt="Image of an asio clamator, owl"
+                width={250}
+                height={250}
+                densities={[1, 2]}
+                class="max-w-62.5"
+                priority
+            />
+        </a>
         <div>
             <h1 class="text-6xl font-semibold">Hi! I'm IJsbrand.</h1>
             <p class="text-lg py-6 leading-relaxed">
-            Software Developer & Designer building accessible and unique digital experiences.
+                Software Developer & Designer building accessible and unique
+                digital experiences.
             </p>
             <div class="inline-flex gap-2">
                 <a href="#projects" class="btn btn-primary">

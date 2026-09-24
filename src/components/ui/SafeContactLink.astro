@@ -1,0 +1,59 @@
+---
+interface Props {
+    user: string;
+    domain: string;
+}
+
+const { user, domain } = Astro.props;
+
+const reversedUser = user.split("").reverse().join("");
+const reversedDomain = domain.split("").reverse().join("");
+---
+
+<button
+    class="email-container"
+    data-user={user}
+    data-domain={domain}
+    title="Click to email, or highlight to copy"
+    aria-label="Email address"
+>
+    <span class="reverse-text">{reversedDomain}</span>
+    <span class="reverse-text">@</span>
+    <span class="reverse-text">{reversedUser}</span>
+</button>
+
+<script>
+    // Handle the click event to open the mail client
+    const emailButtons = document.querySelectorAll(".email-container");
+
+    emailButtons.forEach((button) => {
+        button.addEventListener("click", (e) => {
+            const user = button.getAttribute("data-user");
+            const domain = button.getAttribute("data-domain");
+
+            if (user && domain) {
+                window.location.href = `mailto:${user}@${domain}`;
+            }
+        });
+    });
+</script>
+
+<style>
+    /* Reset button styles to make it look like a text link */
+    .email-container {
+        background: none;
+        border: none;
+        padding: 0;
+        font: inherit;
+        text-decoration: underline;
+        cursor: pointer;
+        display: inline-flex;
+        flex-direction: row-reverse; /* Flips the blocks into the right order */
+    }
+
+    /* Flips the actual letters inside each block back to normal */
+    .reverse-text {
+        direction: rtl;
+        unicode-bidi: bidi-override;
+    }
+</style>
