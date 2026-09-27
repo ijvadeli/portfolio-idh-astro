@@ -1,6 +1,7 @@
 # Portfolio idh astro
 
 This is my personal portfolio website build in astro.
+You can view the website (here)[https://ijvadeli.netlify.app/]
 Not alot to say, build it all by myself with some small tweaks from AI. (color scheme, grid layout)
 
 ## Tech stack
